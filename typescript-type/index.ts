@@ -42,7 +42,8 @@ if (typeof unknownInput1 === "string") {
 }
 
 // never型
-const error = (message: string) => {
+// 決して何も返さない
+const error = (message: string): never => {
   throw new Error(message);
 };
 console.log(error("this is an error"));
