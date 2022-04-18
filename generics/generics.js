@@ -37,3 +37,25 @@ stringLightDatabase.add("banana");
 stringLightDatabase.add("grape");
 stringLightDatabase.remove("grape");
 console.log(stringLightDatabase.get());
+const tmpDatabase = {
+    id: 3,
+    data: [32],
+};
+const tmpDatabase2 = {
+    id: 3,
+    data: [32],
+};
+// promiseはunkownを返すので事前に帰ってくる型を定義してあげる
+const fetchData = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("hello");
+    }, 3000);
+});
+fetchData.then((data) => {
+    data.toLocaleUpperCase();
+});
+// 配列の型定義
+const vegetables = ["Tomato", "Broccolu", "Asparagus"];
+let tmp;
+let tmp4;
+let tmp5;
